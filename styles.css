@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: hsl(233, 47%, 7%);
+}
+
+main {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80vw;
+  height: 60vh;
+  margin: 75px auto;
+  background-color: hsl(244, 38%, 16%);
+}
+
+p {
+  font-size: 0.9375rem;
+}
+
+h1 {
+  color: hsl(0, 0%, 100%);
+  width: 100%;
+  line-height: 1.4;
+}
+
+.card {
+  text-align: left;
+  padding: 3rem;
+  margin: 0 2rem;
+}
+
+.desc {
+  color: hsla(0, 0%, 100%, 0.75);
+  width: 95%;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 1rem;
+  margin: 2.5rem auto 1rem;
+}
+
+.features>p {
+  color: hsla(0, 0%, 100%, 0.6);
+  font-size: 0.7rem;
+}
+
+.second-card {
+  background: url("images/image-header-desktop.jpg");
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(hsl(277, 64%, 61%));
+}
+
+.second-card {
+  background-image: url("images/image-header-desktop.jpg");
+  display: block;
+  position: relative;
+}
+
+.second-card::after {
+  content: "";
+  background: hsl(277, 64%, 61%);
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.second-card > * {
+  z-index: 2;
+}
+
+.purple {
+  color: hsl(277, 64%, 61%);
+}
+
+.white {
+  color: hsl(0, 0%, 100%);
+  font-weight: 900;
+  font-size: 1.1rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width:650px) {
+  main {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 3.5rem auto;
+  }
+  .second-card{
+    background-image: url("images/image-header-mobile.jpg");
+    width: 80vw;
+    height: 20vh;
+  }
+  h1{
+    font-size: 1.2rem;
+    padding-top: 1.5rem;
+  }
+  .desc{
+    font-size: 0.7rem;
+  }
+  .card{
+    padding: 1.5rem;
+    margin: 0 0.5rem ;
+  }
+  .features{
+    font-size: 0.8rem;
+  }
+  .features > p{
+    font-size: 0.6rem;
+  }
+  .white{
+    font-size: 1rem;
+  }
+
+}
+
+/* ## Colors
+
+  ### Primary
+
+  - Very dark blue (main background): hsl(233, 47%, 7%)
+  - Dark desaturated blue (card background): hsl(244, 38%, 16%)
+  - Soft violet (accent): hsl(277, 64%, 61%)
+
+  ### Neutral
+
+  - White (main heading, stats): hsl(0, 0%, 100%)
+  - Slightly transparent white (main paragraph): hsla(0, 0%, 100%, 0.75)
+  - Slightly transparent white (stat headings): hsla(0, 0%, 100%, 0.6) */
